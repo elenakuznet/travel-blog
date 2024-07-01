@@ -250,11 +250,6 @@ img {
 }
 
 
-.container {
-}
-.grid {
-}
-
 .home__data {
   text-align: center;
 }
@@ -345,6 +340,49 @@ img {
 }
 
 /*=============== ABOUT ===============*/
+.about {
+  
+}
+
+.about__container {
+  row-gap: 3rem;
+}
+
+.about__data {
+  text-align: center;
+}
+.section__title {
+}
+.about__description {
+  margin-bottom: 2rem;
+}
+
+.about__image {
+  position: relative;
+  justify-self: center;
+  overflow: hidden;
+}
+
+.about__image:hover .about__img {
+  transform: scale(1.2);
+}
+
+.about__img {
+  width: 300px;
+  transition: transform .4s;
+}
+
+.about__shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, 
+                hsla(0, 0%, 0%, 0) 50%,
+                hsl(0, 0%, 0%) 125%);
+}
+
 
 
 /*=============== POPULAR ===============*/
