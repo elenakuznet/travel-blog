@@ -184,6 +184,28 @@ img {
   font-weight: var(--font-medium);
 }
 
+.nav__link {
+  position: relative;
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-medium);
+}
+
+.nav__link::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: var(--title-color);
+  position: absolute;
+  left: 0;
+  bottom: -.5rem;
+  transition: .3s;
+}
+
+.nav__link::after:hover {
+  width: 70%;
+}
+
 .nav__close {
   position: absolute;
   top: 1rem;
@@ -213,6 +235,12 @@ img {
 
 
 /* Active link */
+
+
+
+.active__link::after {
+  width: 70%;
+}
 
 
 /*=============== HOME ===============*/
@@ -690,9 +718,30 @@ img {
 
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: hsla(0, 0%, 100%, .1);
+  padding: 6px;
+  display: inline-flex;
+  color: var(--title-color);
+  font-size: 1.25rem;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  z-index: var(--z-tooltip);
+  transition: bottom .4s, transform .4s;
+}
 
+.scrollup:hover {
+  transform: translateY(-.25rem);
+}
 
 /* Show Scroll Up */
+
+.show-scroll {
+  bottom: 3rem;
+}
 
 
 /*=============== BREAKPOINTS ===============*/
