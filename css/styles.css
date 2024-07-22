@@ -784,10 +784,13 @@ img {
 }
 .post__description {
 }
-.button {
+
+.post__row  {
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  gap: 2rem;
 }
-.ri-arrow-right-line {
-}
+
 .post__image {
 }
 .post__img {
