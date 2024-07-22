@@ -782,12 +782,13 @@ img {
   display: grid;
   gap: 1rem;
 }
+
 .post__description {
 }
 
 .post__row  {
   display: grid;
-  grid-template-columns: 8fr 4fr;
+  /* grid-template-columns: 8fr 4fr; */
   gap: 2rem;
 }
 
@@ -844,6 +845,12 @@ img {
   .footer__data {
     grid-template-columns: repeat(3, max-content);
   }
+
+  .post__row {
+    grid-template-columns: 8fr 4fr;
+    
+  }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -876,6 +883,7 @@ img {
     order: -1;
   }
 
+  
   .map {
     padding-bottom:56.25%;
   }
