@@ -983,3 +983,38 @@ img {
     right: 3rem;
   }
 }
+
+
+/*=============== Post ===============*/
+
+.post {
+}
+.section {
+}
+.post__container {
+}
+.container {
+}
+.grid {
+}
+.post__title {
+}
+.section__title {
+}
+
+.post__data {
+  display: grid;
+  gap: 1rem;
+}
+.post__description {
+}
+.button {
+}
+.ri-arrow-right-line {
+}
+.post__image {
+}
+.post__img {
+}
+.post__shadow {
+}
