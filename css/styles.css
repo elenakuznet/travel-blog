@@ -257,6 +257,35 @@ img {
   height: 750px;
   object-fit: cover;
   object-position: center;
+
+  background-size: cover;
+  background-position: center;
+  background-image: url('img/home-bg-2.jpg');
+}
+
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); 
+  background-color: hsla(0, 0%, 100%, .2);
+  color: var(--title-color);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.slider-btn i {
+  font-size: 30px;
+}
+
+#prevBtn {
+  left: 1rem;
+}
+
+#nextBtn {
+  right: 1rem;
 }
 
 .home__shadow {
@@ -870,6 +899,14 @@ img {
 }
 
 
+@media screen and (max-width: 576px) {
+  /* hiding slider btn on small devices */
+  .slider-btn {
+    display: none; 
+  }
+}
+
+
 /* For medium devices */
 @media screen and (min-width: 576px) {
   .home__container, 
@@ -890,11 +927,20 @@ img {
     
   }
 
+  .slider-btn {
+    top: 25%;
+  }
+
 }
 
 @media screen and (min-width: 768px) {
   .home__cards {
     grid-template-columns: repeat(2, 240px);
+  }
+
+
+  .slider-btn {
+    top: 35%;
   }
 
   .about__container, .join__container {
@@ -943,6 +989,8 @@ img {
   .footer__copy {
     order: -1;
   }
+
+
 }
 
 

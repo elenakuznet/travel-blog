@@ -1,3 +1,42 @@
+/*=============== HOME SLIDER ===============*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const homeBg = document.getElementById('home-bg');
+
+    const images = [
+        'img/home-bg-2.jpg',
+        'img/home-bg-4.jpg',
+        'img/home-bg-5.jpg',
+    ];
+
+    let currentIndex = 0;
+
+    function changeBackgroundImage() {
+        homeBg.style.backgroundImage = `url(${images[currentIndex]})`;
+        // currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    function showNextImg() {
+        currentIndex = (currentIndex + 1) % images.length;
+        changeBackgroundImage();
+    }
+
+    function showPrevImg() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        changeBackgroundImage();
+    }
+
+
+    changeBackgroundImage();
+
+    // setInterval(changeBackgroundImage, 5000);
+
+    document.getElementById('nextBtn').addEventListener('click', showNextImg);
+    document.getElementById('prevBtn').addEventListener('click', showPrevImg);
+});
+
+
+
 /*=============== SHOW MENU ===============*/
 const navMenu = document.getElementById('nav-menu');
 const navToggle = document.getElementById('nav-toggle');
@@ -6,14 +45,14 @@ const navClose = document.getElementById('nav-close');
 /* Menu show */
 if(navToggle) {
     navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
+        navMenu.classList.add('show-menu');
     })
 }
 
 /* Menu hidden */
 if(navClose) {
     navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu')
+        navMenu.classList.remove('show-menu');
     })
 }
 
@@ -34,7 +73,7 @@ navLinks.forEach((link) => link.addEventListener('click', linkAction));
 /*=============== ADD BLUR TO HEADER ===============*/
 
 const blurHeader = () => {
-    const header = document.getElementById('header')
+    const header = document.getElementById('header');
     // Add a class if the bottom offset is greater than 50 of the viewport
     this.scrollY >= 50 ? header.classList.add('blur-header') 
                     : header.classList.remove('blur-header')

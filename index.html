@@ -16,7 +16,7 @@
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="css/styles.css">
 
-      <title>Responsive travel website</title>
+      <title>Travel blog</title>
    </head>
    <body>
       <!--==================== HEADER ====================-->
@@ -64,7 +64,9 @@
       <main class="main">
          <!--==================== HOME ====================-->
          <section class="home section" id="home">
-            <img src="img/home-bg.jpg" alt="home img" class="home__bg">
+            <div class="home__bg" id="home-bg"></div>
+            <!-- <img src="img/home-bg.jpg" alt="home img" class="home__bg"> -->
+            <!-- <img src="img/home-bg-5.jpg" class="home__bg"> -->
             <div class="home__shadow"></div>
             <div class="home__container container grid">
                <div class="home__data">
@@ -109,6 +111,10 @@ more, get your trip now.
                   </article>
                </div>
             </div>
+
+            <!-- Slider button -->
+            <button id="prevBtn" class="slider-btn"><i class="ri-arrow-left-line"></i></button>
+            <button id="nextBtn" class="slider-btn"><i class="ri-arrow-right-line"></i></button>
          </section>
 
          <!--==================== ABOUT ====================-->
